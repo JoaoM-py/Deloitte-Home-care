@@ -10,3 +10,9 @@ export const LastThirtyMinutesInMinutes = (date:Date) => {
 
     return inMinutes    
 }
+
+export const getFromTwentyFourHoursAgo  = () => {
+    const twentyFourHoursAgo = new Date(Date.now() - 24 * 3600 * 1000);
+
+    return twentyFourHoursAgo
+}

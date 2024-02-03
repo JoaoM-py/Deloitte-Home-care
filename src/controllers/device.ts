@@ -1,7 +1,7 @@
 import express from 'express'
 
-import { createDevice, getBylastReport, getDeviceByImei, getDevices, getFirstLastReport, getOffDevices, getOnDevices } from '../services/device'
-import { LastThirtyMinutesInMinutes } from '../utils/thirtyMinutesAgo';
+import { createDevice, getBylastReport, getDeviceByImei, getDevices, getFirstLastReport, getNotReporting, getOffDevices, getOnDevices } from '../services/device'
+import { LastThirtyMinutesInMinutes } from '../utils/timeFilters';
 
 export const create = async (req: express.Request, res:express.Response) => {
     try {
@@ -82,10 +82,20 @@ export const getDevicesOn = async (req: express.Request, res:express.Response) =
     }
 }
 
-
 export const getDevicesBylastReport = async (req: express.Request, res:express.Response) => {
     try {
         const devices = await getBylastReport();
+
+        return res.status(200).json(devices)
+    } catch (error) {
+        console.error(error);
+        return res.sendStatus(400);
+    }
+}
+
+export const getDevicesNotReporting = async (req: express.Request, res:express.Response) => {
+    try {
+        const devices = await getNotReporting();
 
         return res.status(200).json(devices)
     } catch (error) {
