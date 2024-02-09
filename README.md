@@ -24,7 +24,7 @@ $ npm install
 # Inicie o Projeto
 $ npm start
 ```
-O servidor inciará localmente na porta 3001 (citada no arquivo .env). Use o Insomnia ou postman para simular requisições e respostas das rotas (pelo link [https://localhost:3001](https://localhost:3001))
+O servidor inciará localmente na porta 3001. Use o Insomnia ou postman para simular requisições e respostas das rotas (pelo link [https://localhost:3001](https://localhost:3001))
 
 Caso queira usar o Insomnia para testar as rotas, use o arquivo Insomnia_2024-02-09.json para importar as requisições.
 
