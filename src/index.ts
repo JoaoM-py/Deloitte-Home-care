@@ -21,8 +21,8 @@ app.use(bodyParser.json())
 const server = http.createServer(app);
 
 
-server.listen(3000, ()=> {
-    console.log('Server OK!, running on http://localhost:3000/');    
+server.listen(3001, ()=> {
+    console.log('Server OK!, running on http://localhost:3001/');    
 })
 connect();
 

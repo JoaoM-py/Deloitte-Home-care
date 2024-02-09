@@ -6,10 +6,9 @@ dotenv.config();
 export default function connect() {
     mongoose.Promise = Promise;
     try {
-        mongoose.connect(process.env.DB_URL);
+        mongoose.connect(process.env.DB_URL, { useNewUrlParser: true });
         console.log("Succefuly connect to DB");
     } catch (error) {
         mongoose.connection.on('error' ,(error:Error) => console.log(error));  
     }
-    
 }
