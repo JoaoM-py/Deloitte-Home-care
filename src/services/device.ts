@@ -1,5 +1,5 @@
 import {getFromTwentyFourHoursAgo, getLastThirtyMinutes} from "../utils/timeFilters";
-import DeviceData from "../utils/schemas"
+import DeviceData from "../schemas/device"
 
 export const getDevices = async () =>  await DeviceData.find();
 export const getDeviceByImei = (async (imei:string)=> await DeviceData.findOne({imei}))
@@ -18,6 +18,3 @@ export const getFirstLastReport = async (imei:string) => await DeviceData
 
 export const createDevice = async (values: Record<string, any>) =>  await new DeviceData(values)
     .save().then((device) => device.toObject());
-
-
- 
