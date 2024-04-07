@@ -8,7 +8,7 @@ As seguintes tecnologias e ferramentas foram utilizadas neste projeto: `Typescri
 
 ### :gear: Como utilizar
 
-É exencial rodar primeiro esta API antes do projeto frontend [link](https://github.com/JoaoM-py/Deloitte-home-care-web).
+É exencial rodar primeiro esta API antes do projeto frontend [link](https://github.com/JoaoM-py/Deloitte-home-care-web), e também utilizar uma conexão com um banco [mongo](https://www.mongodb.com/pt-br/cloud/atlas/register) 
 
 - Tutorial para rodar o projeto
 
